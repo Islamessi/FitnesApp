@@ -2,6 +2,7 @@
 
 namespace FitnesApp.BL.Model
 {
+    [Serializable]
     /// <summary>
     /// Пользователь.
     /// </summary>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnesApp.BL.Controller;
+using System;
 
 namespace FitnesApp.CMD
 {
@@ -6,7 +7,25 @@ namespace FitnesApp.CMD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Вас приветсвует приложение Fitness");
+
+            Console.WriteLine("Введите имя пользователя");
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Введите пол");
+            var gender = Console.ReadLine();
+
+            Console.WriteLine("Введите дату рождения");
+            var birthdate = DateTime.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите вес");
+            var weight = Double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите рост");
+            var height = Double.Parse(Console.ReadLine());
+
+            var userConroller = new UserController(name, gender, birthdate, weight, height);
+            userConroller.Save();
         }
     }
 }
